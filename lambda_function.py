@@ -3,7 +3,7 @@ import boto3
 def lambda_handler(event, context):
     s3 = boto3.client('s3')
     sns = boto3.client('sns')
-    topic_arn = 'arn:aws:sns:us-east-1:YOUR_ACCOUNT_ID:S3SecurityAlerts'
+    topic_arn = 'arn:aws:sns:us-east-2:YOUR_ACCOUNT_ID:S3SecurityAlerts'
     
     buckets = s3.list_buckets()['Buckets']
     public_buckets = []
